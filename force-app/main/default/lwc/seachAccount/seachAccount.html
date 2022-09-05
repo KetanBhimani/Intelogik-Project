@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="searh account name" icon-name="custom-custom15">
+        <lightning-input type="search" onchange={searchHandler}></lightning-input>
+        <template if:true={act.data}>
+            <template for:each={act.data} for:item="acc">
+                <lightning-card key={acc.id} title={acc.Name} icon-name="standard:account">
+                    <li>Phone Number #  {acc.Phone}</li>
+                </lightning-card>
+            </template>
+        </template>
+    </lightning-card>
+</template>

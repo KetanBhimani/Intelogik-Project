@@ -1,0 +1,18 @@
+<template>
+    <template if:true={showButton}>
+        <template for:each={ceoList} for:item="cd">
+            <ul key={cd.id}>
+                <li>
+                    CEO Ranking : {cd.id} | Name : {cd.name} | title : {cd.title}
+                </li>
+            </ul>
+
+        </template>
+
+        <lightning-button variant="brand" label="Hide Details" onclick={hideHandler}></lightning-button>
+    </template>
+
+    <template if:false={showButton}>
+        <lightning-button variant="brand" label="Show Details" onclick={showHandler}></lightning-button>
+    </template>
+</template>

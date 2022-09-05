@@ -1,0 +1,22 @@
+<template>
+
+    <template if:false={valBooleanflag}>
+        <lightning-button variant="brand" label="Show Form" onclick={showHandler}></lightning-button>
+    </template>
+
+    <template if:true={valBooleanflag}>
+        <lightning-card title="Patient Details Form" icon-name="custom:custom11">
+            <div>
+                <lightning-input type="text" label="Enter First Name"></lightning-input>
+                <lightning-input type="text" label="Enter Last Name"></lightning-input>
+                <lightning-input type="text" label="Enter Phone Number"></lightning-input>
+                <lightning-input type="text" label="Enter Email Name"></lightning-input>
+                <lightning-input type="text" label="Enter Your City"></lightning-input>
+
+                <lightning-button variant="brand" label="Hide Form" onclick={hideHandler}></lightning-button>
+
+            </div>
+        </lightning-card>
+    </template>
+
+</template>
