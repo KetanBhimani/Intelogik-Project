@@ -9,7 +9,7 @@ export default class CustomValidation extends LightningElement {
         let dateValue = dateRef.value;
 
         if(!nameValue){
-            nameRef.setCustomValidity("Please enter name");
+            nameRef.setCustomValidity("Please Enter name");
         }
         else{
             nameRef.setCustomValidity("");
